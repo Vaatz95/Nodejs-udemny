@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+      meta(charset="UTF-8")
+      meta(http-equiv="X-UA-Compatible", content="IE=edge")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      title #{pageTitle}
+      link(rel="stylesheet", href="/css/main.css")
+      block styles
+  body
+      header.main-header
+      nav.main-header__nav
+          ul.main-header__item-list
+              li.main-header__item
+                  a(href="/", class=(path ==='/' ? 'active' : "")) Shop
+              li.main-header__item
+                  a(href="/admin/add-product", class=(path ==='/admin/add-product' ? 'active' : "")) Add Product
+      block content
+
+      //- 공통의 레이아웃을 사용하게 해줄 수 있는데 block을 활용해서 뒤에 무엇을 넣는지에 따라 동적으로 적용이 가능해진다. 이렇게 틀을 짜고 뒤에 block 부분에 무슨 스타일을 넣을지
+      //- 혹은 무슨 컨텐츠를 안에 넣어줄지로.
